@@ -1,4 +1,23 @@
 #include "monty.h"
+
+/**
+ * isNumber - checks if a string is a number
+ * @str_n: string to check
+ *
+ * Return: 1 if its a number, 0 otherwise.
+ */
+int isNumber(char str_n[])
+{
+	int i = 0;
+
+	if (str_n[0] == '-')
+		str_n[0] = '0';
+	for (i = 0; str_n[i]; i++)
+		if (!isdigit(str_n[i]))
+			return (0);
+	return (1);
+}
+
 /**
  * get_opcode - get opcode function
  * @token: name
@@ -11,10 +30,6 @@ void (*get_opcode(char *token))(stack_t **stack, unsigned int line_number)
 	instruction_t ops[] = {
 		{"push", push},
 		{"pall", pall},
-		{"pint", pint},
-		{"pop", pop},
-		{"swap", swap},
-		{"add", add},
 		{NULL, NULL},
 	};
 
@@ -35,6 +50,7 @@ void (*get_opcode(char *token))(stack_t **stack, unsigned int line_number)
 int main(int argc, char **argv)
 {
 	void (*f)(stack_t **stack, unsigned int line_num);
+
 	FILE *file = NULL;
 	char *buffer = NULL, *token = NULL;
 	size_t bufsize = 0;
