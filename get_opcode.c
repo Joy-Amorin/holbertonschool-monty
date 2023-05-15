@@ -13,7 +13,9 @@ void (*get_opcode(char *token))(stack_t **stack, unsigned int line_number)
 		{"push", push},
 		{"pall", pall},
 		{"pint", pint},
+		{"swap", swap},
 		{"pop", pop},
+		{"add", add},
 		{NULL, NULL},
 	};
 
