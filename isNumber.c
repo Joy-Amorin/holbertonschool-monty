@@ -8,12 +8,12 @@
  */
 int isNumber(char str_n[])
 {
-        int i = 0;
+	int i = 0;
 
-        if (str_n[0] == '-')
-                str_n[0] = '0';
-        for (i = 0; str_n[i]; i++)
-                if (!isdigit(str_n[i]))
-                        return (0);
-        return (1);
+	if (str_n[0] == '-')
+		str_n[0] = '0';
+	for (i = 0; str_n[i]; i++)
+		if (!isdigit(str_n[i]))
+			return (0);
+	return (1);
 }
