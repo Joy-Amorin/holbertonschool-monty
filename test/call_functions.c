@@ -4,7 +4,7 @@
  * stack_free - function that free the stack
  * @head: head of the list
  */
-void stack_free(stack_t *head)
+void free_stack(stack_t *head)
 {
 	stack_t *now = head, *next = NULL;
 
@@ -14,4 +14,17 @@ void stack_free(stack_t *head)
 		free(now);
 		now = next;
 	}
+}
+
+/**
+ * error_exit - frees the stack and exits due to erro
+ * @stack: pointer to the head of the stack
+ *
+ */
+void error_exit(stack_t **stack)
+{
+	if (*stack)
+		free_stack(*stack);
+
+	exit(EXIT_FAILURE);
 }

@@ -18,7 +18,7 @@ int main(int ac, char **of)
 	}
 
 	opfile(of[1], &stack);
-	stack_free(stack);
+	free_stack(stack);
 
 	return (EXIT_SUCCESS);
 }

@@ -38,7 +38,16 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+typedef void (*instruct_func)(stack_t **stack, unsigned int line_number);
+
+instruct_func func_cheq(char *str);
+
+/** Prototypes */
+
 int main(int ac, char **of);
-void stack_free(stack_t *head);
+void free_stack(stack_t *head);
+void opfile(char *filename, stack_t **stack);
+instruct_func func_cheq(char *str);
+void error_exit(stack_t **stack);
 
 #endif
