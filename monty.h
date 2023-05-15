@@ -40,16 +40,12 @@ void push(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);*/
-<<<<<<< HEAD
 int isNumber(char str_n[]);
 void free_stack(stack_t *stack);
-=======
 int isNumber(char s[]);
-void free_stack(stack_t **stack);
-void _pall(stack_t **stack, __attribute__ ((unused)) unsigned int line_number);
+void free_stack(stack_t *stack);
+/**void _pall(stack_t **stack, __attribute__ ((unused)) unsigned int line_number);
 void _pint(stack_t **stack, unsigned int line_number);
 void _pop(stack_t **stack, unsigned int line_number);
-void _swap(stack_t **stack, unsigned int line_number);
-
->>>>>>> 94c06e5472aa8b49a20a95f22e1a55365d47344a
+void _swap(stack_t **stack, unsigned int line_number);**/
 #endif
