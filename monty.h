@@ -42,4 +42,6 @@ void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);*/
 int isNumber(char s[]);
 void free_stack(stack_t **stack);
+void _pall(stack_t **stack, __attribute__ ((unused)) unsigned int line_number);
+
 #endif
