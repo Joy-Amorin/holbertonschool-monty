@@ -12,6 +12,8 @@ void (*get_opcode(char *token))(stack_t **stack, unsigned int line_number)
 	instruction_t ops[] = {
 		{"push", push},
 		{"pall", pall},
+		{"pint", pint},
+		{"pop", pop},
 		{NULL, NULL},
 	};
 
