@@ -40,6 +40,6 @@ void push(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);*/
-int isNumber(char s[]);
-void free_stack(stack_t **stack);
+int isNumber(char str_n[]);
+void free_stack(stack_t *stack);
 #endif
